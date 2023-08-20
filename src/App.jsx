@@ -6,6 +6,18 @@ import { useSelector, useDispatch } from 'react-redux'
 import { getApiConfiguration, getGenres } from './store/homeSlice.js'
 
 
+import Footer from './components/footer/Footer.jsx'
+import Header from './components/header/Header.jsx'
+
+import Home from './pages/home/Home.jsx';
+import Details from './pages/details/Details.jsx'
+import SearchResult from './pages/searchResult/SearchResult.jsx'
+import Explore from './pages/explore/Explore.jsx'
+import PageNotFound from './pages/404/PageNotFound.jsx'
+
+
+
+
 function App() {
 
   const dispatch = useDispatch();
@@ -27,7 +39,13 @@ function App() {
   return (
     <div className='App' >App
       {url?.total_pages}
+      <Home />
+      <Details />
+      <SearchResult />
+      <Explore />
+      <PageNotFound />
     </div>
+
   )
 }
 
